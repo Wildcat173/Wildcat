@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reality Cycle</title>
+    <style>
+        /* Ensure full viewport usage */
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+            font-family: 'Courier New', Courier, monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .reality {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            font-size: 3rem;
+            transition: all 1s ease;
+        }
+
+        /* Realities */
+        .reality-normal {
+            background-color: #0a0a0a;
+            color: #00ffcc;
+        }
+
+        .reality-glitched {
+            background-color: #2e003e;
+            color: #ff00ff;
+            animation: glitchy 0.3s infinite;
+        }
+
+        .reality-void {
+            background-color: #000000;
+            color: #aaaaaa;
+            font-style: italic;
+            letter-spacing: 4px;
+        }
+
+        .reality-heatwave {
+            background-color: #ff4500;
+            color: #ffe600;
+            animation: flicker 0.2s infinite;
+        }
+
+        .reality-ocean {
+            background: linear-gradient(to bottom, #003366, #006699);
+            color: #aeefff;
+        }
+
+        .reality-neon {
+            background-color: #121212;
+            color: #39ff14;
+            text-shadow: 0 0 5px #39ff14, 0 0 10px #39ff14, 0 0 15px #39ff14;
+        }
+
+        .reality-sunset {
+            background: linear-gradient(45deg, #ff6347, #ffcc00);
+            color: #fff;
+        }
+
+        .reality-glitchcore {
+            background-color: #000;
+            color: #fff;
+            animation: glitchcore 0.2s infinite;
+        }
+
+        .reality-psychedelic {
+            background: linear-gradient(to right, #ff0080, #ffcc00, #0080ff);
+            color: #fff;
+            animation: psychedelic 1s infinite;
+        }
+
+        .reality-hologram {
+            background: rgba(0, 255, 255, 0.5);
+            color: #fff;
+            font-size: 2rem;
+            letter-spacing: 3px;
+        }
+
+        .reality-eclipse {
+            background: #000;
+            color: #fff;
+            background-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+            text-align: center;
+            padding: 50px;
+        }
+
+        .reality-retro {
+            background-color: #f0f0f0;
+            color: #ff00ff;
+            font-family: 'Courier New', monospace;
+            text-align: center;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 0px #ff00ff, -2px -2px 0px #ff00ff;
+        }
+
+        .reality-cyberpunk {
+            background-color: #1a1a1a;
+            color: #00ff99;
+            text-shadow: 0 0 10px #00ff99, 0 0 20px #00ff99;
+        }
+
+        .reality-mystic {
+            background: linear-gradient(135deg, #6e00ff, #ff00f5);
+            color: white;
+            text-shadow: 0 0 10px white;
+        }
+
+        .reality-darkwave {
+            background: linear-gradient(to bottom, #000000, #1a0033);
+            color: #cc00ff;
+            text-shadow: 0 0 8px #cc00ff;
+        }
+
+        .reality-nebula {
+            background: radial-gradient(circle, #330066, #000033);
+            color: #ff99ff;
+            animation: pulse 2s infinite;
+        }
+
+        .reality-inferno {
+            background: linear-gradient(to right, #ff0000, #ff6600);
+            color: #ffff00;
+            animation: flicker 0.1s infinite;
+        }
+
+        .reality-vortex {
+            background: conic-gradient(from 180deg, #00ffcc, #ff00ff, #00ffcc);
+            color: white;
+            animation: spin 10s linear infinite;
+        }
+
+        .reality-radiant {
+            background: linear-gradient(to right, #ffcc00, #ff0066);
+            color: white;
+            text-shadow: 0 0 15px white;
+        }
+
+        .reality-warp {
+            background-color: black;
+            color: lime;
+            font-family: monospace;
+            animation: warp 0.5s infinite;
+        }
+
+        .reality-pulsar {
+            background-color: #000022;
+            color: #00ffff;
+            animation: pulsate 1s ease-out infinite;
+        }
+
+        .reality-ultraviolet {
+            background-color: #330066;
+            color: #ff00ff;
+            text-shadow: 0 0 10px #ff00ff;
+        }
+
+        .reality-lunar {
+            background: linear-gradient(to bottom, #000033, #333366);
+            color: #ccccff;
+            font-style: italic;
+        }
+
+        .reality-phantom {
+            background-color: #111111;
+            color: #00ff88;
+            text-shadow: 0 0 5px #00ff88;
+        }
+
+        .reality-cosmic {
+            background:
+                radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.8) 0%, transparent 20%),
+                radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.6) 0%, transparent 20%),
+                radial-gradient(circle at 40% 60%, rgba(255, 100, 255, 0.4) 0%, transparent 30%),
+                linear-gradient(to bottom, #000000, #000033, #000066);
+            color: #ffffff;
+            text-shadow: 0 0 10px #ffffff, 0 0 20px #00ffff;
+            animation: cosmic-pulse 8s infinite alternate;
+        }
+
+        .reality-electric {
+            background-color: #000;
+            color: #00ffff;
+            animation: electric 0.5s infinite;
+        }
+
+        .reality-digital {
+            background-color: #000;
+            color: #00ff00;
+            font-family: monospace;
+            text-shadow: 0 0 5px #00ff00;
+        }
+
+        .reality-frostbite {
+            background: linear-gradient(to bottom, #000066, #00ccff);
+            color: white;
+            text-shadow: 0 0 10px white;
+        }
+
+        .reality-illusion {
+            background: repeating-linear-gradient(45deg, #ff00ff, #ff00ff 10px, #00ffff 10px, #00ffff 20px);
+            color: white;
+        }
+
+        .reality-shadow {
+            background-color: #000;
+            color: #333;
+            text-shadow: 0 0 5px #333;
+        }
+
+        /* Keyframe Animations */
+        @keyframes glitchy {
+            0% {
+                text-shadow: 2px 0 red, -2px 0 cyan;
+            }
+
+            50% {
+                text-shadow: -2px 0 lime, 2px 0 magenta;
+            }
+
+            100% {
+                text-shadow: 2px 0 blue, -2px 0 yellow;
+            }
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes glitchcore {
+            0% {
+                text-shadow: 2px 2px #ff00ff, -2px -2px #00ffff;
+            }
+
+            50% {
+                text-shadow: -2px 2px #ffff00, 2px -2px #ff00ff;
+            }
+
+            100% {
+                text-shadow: 2px -2px #00ff00, -2px 2px #ff00ff;
+            }
+        }
+
+        @keyframes psychedelic {
+            0% {
+                background: linear-gradient(to right, #ff0080, #ffcc00, #0080ff);
+            }
+
+            50% {
+                background: linear-gradient(to right, #ff0000, #ff8000, #0080ff);
+            }
+
+            100% {
+                background: linear-gradient(to right, #ff0080, #ffcc00, #0080ff);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.8;
+            }
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes warp {
+            0% {
+                letter-spacing: 0;
+            }
+
+            50% {
+                letter-spacing: 5px;
+            }
+
+            100% {
+                letter-spacing: 0;
+            }
+        }
+
+        @keyframes pulsate {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.05);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @keyframes electric {
+            0% {
+                text-shadow: 0 0 5px #00ffff;
+            }
+
+            50% {
+                text-shadow: 0 0 20px #00ffff, 0 0 30px #00ffff;
+            }
+
+            100% {
+                text-shadow: 0 0 5px #00ffff;
+            }
+        }
+
+        @keyframes cosmic-pulse {
+            0% {
+                background-size: 100% 100%, 100% 100%, 100% 100%, 100% 100%;
+            }
+
+            100% {
+                background-size: 150% 150%, 150% 150%, 150% 150%, 150% 150%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="text" class="reality reality-normal">
+        Reality: Normal
+    </div>
+
+    <script>
+        const realities = [
+            'reality-normal', 'reality-glitched', 'reality-void', 'reality-heatwave', 'reality-ocean',
+            'reality-neon', 'reality-sunset', 'reality-glitchcore', 'reality-psychedelic', 'reality-hologram',
+            'reality-eclipse', 'reality-retro', 'reality-cyberpunk', 'reality-mystic', 'reality-darkwave',
+            'reality-nebula', 'reality-inferno', 'reality-vortex', 'reality-radiant', 'reality-warp',
+            'reality-pulsar', 'reality-ultraviolet', 'reality-lunar', 'reality-phantom', 'reality-cosmic',
+            'reality-electric', 'reality-digital', 'reality-frostbite', 'reality-illusion', 'reality-shadow'
+        ];
+        let currentReality = 0;
+        const realityElement = document.getElementById('text');
+
+        function changeReality() {
+            // Remove the current reality class
+            realityElement.classList.remove(realities[currentReality]);
+
+            // Move to the next reality
+            currentReality = (currentReality + 1) % realities.length;
+
+            // Add the next reality class
+            realityElement.classList.add(realities[currentReality]);
+
+            // Update text
+            const realityName = realities[currentReality].replace('reality-', '').replace('-', ' ').toUpperCase();
+            realityElement.innerText = `Reality: ${realityName}`;
+        }
+
+        // Listen for 'f' key press
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'f') {
+                changeReality();
+            }
+        });
+    </script>
+</body>
+
+</html>
