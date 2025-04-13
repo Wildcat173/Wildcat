@@ -1,18 +1,52 @@
-h3{ 
-    color:blue; 
-}
-*{
-    font-size: 30px;
-    Font-weight: 500px;
-}
-
-h4{ 
-    color:palevioletred 
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: floralwhite;
+    font-size: larger;
 }
 
-.myclass{
-    color:darkorange
+h1 {
+    color: #1F6FEB
 }
-#myid{
-    color:aqua
+
+/* Attribute Selector */
+
+a {
+
+    color: #8B949E;
+
+    text-decoration: none;
+
+}
+
+a:hover {
+
+    color: #1F6FEB;
+
+}
+
+p:not(:first-of-type) {
+
+    text-decoration: underline;
+
+}
+
+ul li::before {
+
+    content: "🚀 ";
+
+}
+
+a::after {
+
+    content: " 🌌";
+
+}
+
+p::first-letter {
+
+    font-size: 200%;
+
+    color: #FF7B72;
+
 }
