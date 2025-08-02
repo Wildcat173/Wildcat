@@ -1,52 +1,23 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: black;
-    color: floralwhite;
-    font-size: larger;
+    background: #252525;
+    font-family: "Baloo Tamma 2", cursive;
 }
 
-h1 {
-    color: #1F6FEB
+.m-heading {
+    font-family: "roborto Slab", serif;
 }
 
-/* Attribute Selector */
+.navigation-link {
+    border: 2px solid transparent
 
-a {
+}
 
-    color: #8B949E;
-
+.navigation-link:hover {
     text-decoration: none;
-
-}
-
-a:hover {
-
-    color: #1F6FEB;
-
-}
-
-p:not(:first-of-type) {
-
-    text-decoration: underline;
-
-}
-
-ul li::before {
-
-    content: "🚀 ";
-
-}
-
-a::after {
-
-    content: " 🌌";
-
-}
-
-p::first-letter {
-
-    font-size: 200%;
-
-    color: #FF7B72;
-
+    border-bottom: 2px solid #ecb40c;
+    transition: 0.5s ease;
 }
