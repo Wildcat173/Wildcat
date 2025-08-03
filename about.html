@@ -2,63 +2,84 @@
 <html>
 
 <head>
-    <title>Navigation</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-        }
+    <meta charset="UTF-8" />
 
-        .topnov {
-            overflow: hidden;
-            background-color: #333;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        .topnov a {
-            float: left;
-            color: deeppink;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-            font-size: 17px;
-        }
+    <!-- Bootstrap CSS -->
 
-        .topnov a:hover {
-            background-color: blueviolet;
-            color: deepskyblue
-        }
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
 
-        .topnav a.active {
-            background-color: greenyellow;
-            color: darkcyan;
-        }
-    </style>
+    <!-- My CSS -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+
+    <script src="https://kit.fontawesome.com/996973c893.js"></script>
+
+    <!-- Google Fonts -->
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Slab:wght@200;400;600;900&display=swap"
+        rel="stylesheet" />
 </head>
 
-<body>
-    <div class="topnov">
-        <a class="active" href="nav.html">home</a>
-        <a href="about.html">about</a>
-        <a href="contactme.html">contact</a>
-        <a href="gallery.html">gallery</a>
-    </div>
-    <div class="content">
-        <h1>About us</h1>
-        <p>We’re a team of passionate website developers dedicated to transforming ideas into sleek, fast, and user-friendly
-        digital experiences. From custom-coded sites to modern web apps, we specialize in building responsive websites that work
-        beautifully across all devices.
-        
-        With expertise in HTML, CSS, JavaScript, React, Tailwind CSS, and more, we focus on writing clean, scalable code and
-        delivering high-performing, visually striking sites. Whether you’re launching a new business, building an online store,
-        or upgrading your brand’s digital presence — we’re here to help make it happen.
-        
-        We believe great websites are built on great collaboration. Clear communication, smart design, and powerful
-        functionality are at the core of everything we do.
-        
-        Let’s build something amazing together.</p>
-        <p>On this site youll find examples of our work, background, and resources to help you in your digital journey</p>
-    </div>
-    </div>
-</body>
+<title>Portfolio</title>
 
-</html>
+<body>
+    <div class="container navigation pt-3">
+        <div class="row">
+            <div class="col-6 d-flex justify-content-start align-items-center">
+                <i class="fa fa-spinner fa-spin fa-3x fa-fw text-warning pb-3"></i>
+                <h5 class="d-inline pl-2 text-white">CODINGAL</h5>
+            </div>
+            <div class="col-6 pt-2">
+                <div class="row text-center p-0 d-flex justify-content-end align-items-center">
+                    <div class="col-3">
+                        <a href="about.html" class="text-white navigation-link">About</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="index.html" class="text-white navigation-link">Projects</a>
+                    </div>
+                    <div class="col-3">
+                        <a href="#social-media" class="text white navigation link" Projects></a>
+                    </div>
+                    <div class="col-3"></div>
+                    <a href="resume" target="_blank" class="text-white-navigation-link"> </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="about" class="container about p-5">
+                <div class="row">
+
+                    <div class="col-6 pl-5 pt-5 pb-5 text-white">
+                        <h3 text="text-warning"> about codingal</h3>
+                        <h1 class="m-heading">A little bit about me</h1>
+                        <p>
+                                <b class="text-warning">Codingal </b>is on a mission to inspire school kids to
+                                <b class="text-warning">fall in love with coding</b>. Coding helps develop logical thinking and
+                                problem-solving skills. Coding jobs are the future. They already constitute more than 60% of all the
+                                jobs in Science, Technology, Engineering, and Math. While still in school, those who start young
+                                will be ahead of everyone by the time they get into college. They will be
+                                <b class="text-warning">creators of the future</b>.
+                            </p>
+                            <br />
+                            <p>
+                                In today's age, <b class="text-warning">coding </b>has become an essential skill. Coding for kids
+                                helps them interact with technology better. Studies also show that it aids in holistic development
+                                of the child, improving cognitive functioning as well as logical thinking.
+                                <b class="text-warning">Holistic development </b>means evolving cognitive, physical, and social
+                                skills of a child to prepare them better for the interactions with the world. Coding as an activity
+                                not only involves mental development but also focuses on social understanding.
+                        </p>
+                        <button class="btn btn-outline-warning">Learn More</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+</body>
